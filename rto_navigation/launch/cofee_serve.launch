@@ -1,0 +1,9 @@
+<launch>
+    <!-- Run move_base -->
+    <node pkg="rto_navigation" type="goal_nav.py" name="goal_nav" output="screen">
+        <rosparam file="$(find rto_navigation)/config/table_locations.yaml" command="load" ns="table_locations" />
+    </node>
+
+    <node pkg="rto_navigation" type="set_table_locations.py" name="goal_nav" output="set_table_locations">
+
+</launch>
